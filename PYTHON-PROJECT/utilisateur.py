@@ -8,6 +8,7 @@ class utilisateur(object):
         self.mdp=mdp
 
     def ajout(self):
+        # commentaire bete
         lst=[self.id,self.mdp]
         cursor.execute("""SELECT identifiant FROM utilisateur where identifiant=(?)""",(self.id,))
         liste = list(cursor)
