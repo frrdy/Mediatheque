@@ -36,5 +36,37 @@ class magazine(objets):
                 conn.commit()
                 print("suppression effectuée avec succes")
 
-mag1=magazine(3332456734222,"A","A","03-04-2020","03-04-2021","magazine",1111,22,"lalala","politique","hebdomadaire")
-mag1.ajout()
+
+def TMauteur(nomauteur):
+    cursor.execute(""" select * from objets, magazine where objets.idobjet=magazine.idobjet and objets.auteur=(?)""",
+                   (nomauteur,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TMdatep(jour):
+    cursor.execute(""" select * from objets, magazine where objets.idobjet=magazine.idobjet and objets.datep=(?)""",
+                   (jour,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TMdateaj(jour):
+    cursor.execute(""" select * from objets, magazine where objets.idobjet=magazine.idobjet and objets.dateaj=(?)""",
+                   (jour,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TMmaisone(nom):
+    cursor.execute(
+        """ select * from objets, magazine where objets.idobjet=magazine.idobjet and magazine.maisonedition=(?)""", (nom,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TMfrequence(freq):
+    cursor.execute(""" select * from objets, magazine where objets.idobjet=magazine.idobjet and magazine.frequence=(?)""",
+                   (freq,))
+    liste = list(cursor)
+    print(liste)

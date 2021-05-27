@@ -33,3 +33,29 @@ class journal(objets):
                 cursor.execute(""" DELETE FROM journal WHERE idobjet= (?) """, (self.idobjet,))
                 conn.commit()
                 print("suppression effectuée avec succes")
+
+
+def TJauteur(nomauteur):
+    cursor.execute(""" select * from objets, journal where objets.idobjet=journal.idobjet and objets.auteur=(?)""",(nomauteur,))
+    liste = list(cursor)
+    print(liste)
+
+def TJdatep(jour):
+    cursor.execute(""" select * from objets, journal where objets.idobjet=journal.idobjet and objets.datep=(?)""",(jour,))
+    liste = list(cursor)
+    print(liste)
+
+def TJdateaj(jour):
+    cursor.execute(""" select * from objets, journal where objets.idobjet=journal.idobjet and objets.dateaj=(?)""",(jour,))
+    liste = list(cursor)
+    print(liste)
+
+def TJmaisone(nom):
+    cursor.execute(""" select * from objets, journal where objets.idobjet=journal.idobjet and journal.maisonedition=(?)""",(nom,))
+    liste = list(cursor)
+    print(liste)
+
+def TJtypej(nom):
+    cursor.execute(""" select * from objets, journal where objets.idobjet=journal.idobjet and journal.typej=(?)""",(nom,))
+    liste = list(cursor)
+    print(liste)

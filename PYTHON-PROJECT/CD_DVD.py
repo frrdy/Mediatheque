@@ -33,3 +33,30 @@ class CD_DVD(objets):
             cursor.execute(""" DELETE FROM CD_DVD WHERE idobjet= (?) """, (self.idobjet,))
             conn.commit()
             print("suppression effectuée avec succes")
+
+def TCDauteur(nomauteur):
+        cursor.execute(""" select * from objets, CD_DVD where objets.idobjet=CD_DVD.idobjet and objets.auteur=(?)""",
+                       (nomauteur,))
+        liste = list(cursor)
+        print(liste)
+
+
+def TCDdatep(jour):
+    cursor.execute(""" select * from objets, CD_DVD where objets.idobjet=CD_DVD.idobjet and objets.datep=(?)""",
+                   (jour,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TCDdateaj(jour):
+    cursor.execute(""" select * from objets, CD_DVD where objets.idobjet=CD_DVD.idobjet and objets.dateaj=(?)""",
+                   (jour,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TCDtypec(typecc):
+    cursor.execute(""" select * from objets, CD_DVD where objets.idobjet=CD_DVD.idobjet and CD_DVD.typec=(?)""",
+                   (typecc,))
+    liste = list(cursor)
+    print(liste)

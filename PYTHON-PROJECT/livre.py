@@ -33,3 +33,38 @@ class livre(objets):
                 cursor.execute(""" DELETE FROM Livre WHERE idobjet= (?) """, (self.idobjet,))
                 conn.commit()
                 print("suppression effectuée avec succes")
+
+
+def TLauteur(nomauteur):
+    cursor.execute(""" select * from objets, livre where objets.idobjet=livre.idobjet and objets.auteur=(?)""",
+                   (nomauteur,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TLdatep(jour):
+    cursor.execute(""" select * from objets, livre where objets.idobjet=livre.idobjet and objets.datep=(?)""",
+                   (jour,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TLdateaj(jour):
+    cursor.execute(""" select * from objets, livre where objets.idobjet=livre.idobjet and objets.dateaj=(?)""",
+                   (jour,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TLmaisone(nom):
+    cursor.execute(
+        """ select * from objets, livre where objets.idobjet=livre.idobjet and livre.maisonedition=(?)""", (nom,))
+    liste = list(cursor)
+    print(liste)
+
+
+def TLtypel(nom):
+    cursor.execute(""" select * from objets, livre where objets.idobjet=livre.idobjet and livre.typel=(?)""",
+                   (nom,))
+    liste = list(cursor)
+    print(liste)
