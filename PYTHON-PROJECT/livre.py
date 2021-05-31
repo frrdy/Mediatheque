@@ -40,13 +40,14 @@ def TLauteur(nomauteur):
                    (nomauteur,))
     liste = list(cursor)
     print(liste)
-
+    return liste
 
 def TLdatep(jour):
     cursor.execute(""" select * from objets, livre where objets.idobjet=livre.idobjet and objets.datep=(?)""",
                    (jour,))
     liste = list(cursor)
     print(liste)
+    return liste
 
 
 def TLdateaj(jour):
@@ -54,6 +55,7 @@ def TLdateaj(jour):
                    (jour,))
     liste = list(cursor)
     print(liste)
+    return liste
 
 
 def TLmaisone(nom):
@@ -61,6 +63,7 @@ def TLmaisone(nom):
         """ select * from objets, livre where objets.idobjet=livre.idobjet and livre.maisonedition=(?)""", (nom,))
     liste = list(cursor)
     print(liste)
+    return liste
 
 
 def TLtypel(nom):
@@ -68,3 +71,4 @@ def TLtypel(nom):
                    (nom,))
     liste = list(cursor)
     print(liste)
+    return liste
