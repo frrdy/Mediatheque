@@ -26,13 +26,13 @@ class magazine(objets):
         if liste!=[]:
             print("identifiant deja utilisé donc objet deja existant")
 
-    def supprimer(self):
-            cursor.execute(""" select idobjet from objets where idobjet= (?) """, (self.idobjet,))
+def supprimer(identifiant):
+            cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
             liste = list(cursor)
             print(liste)
             if liste != []:
-                cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (self.idobjet,))
-                cursor.execute(""" DELETE FROM magazine WHERE idobjet= (?) """, (self.idobjet,))
+                cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
+                cursor.execute(""" DELETE FROM magazine WHERE idobjet= (?) """, (ientifiant,))
                 conn.commit()
                 print("suppression effectuée avec succes")
 

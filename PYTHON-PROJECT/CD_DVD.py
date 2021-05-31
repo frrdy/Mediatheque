@@ -24,13 +24,13 @@ class CD_DVD(objets):
             print("identifiant deja utilisé donc objet deja existant")
 
 
-    def supprimer(self):
-         cursor.execute(""" select idobjet from objets where idobjet= (?) """, (self.idobjet,))
+def supprimer(identifiant):
+         cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
          liste = list(cursor)
          print(liste)
          if liste!=[]:
-            cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (self.idobjet,))
-            cursor.execute(""" DELETE FROM CD_DVD WHERE idobjet= (?) """, (self.idobjet,))
+            cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
+            cursor.execute(""" DELETE FROM CD_DVD WHERE idobjet= (?) """, (identifiant,))
             conn.commit()
             print("suppression effectuée avec succes")
 
