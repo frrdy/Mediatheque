@@ -1,14 +1,22 @@
+"""
+@author: WANDJI K Frédérique
+"""
 import sqlite3
 conn = sqlite3.connect('base.db')
 cursor = conn.cursor()
 
 class utilisateur(object):
+    """
+    constructeur
+    """
     def __init__(self,id,mdp):
         self.id=id
         self.mdp=mdp
 
     def ajout(self):
-        # commentaire bete
+        """
+        ajout d'un nouvel utilisateur
+        """
         lst=[self.id,self.mdp]
         cursor.execute("""SELECT identifiant FROM utilisateur where identifiant=(?)""",(self.id,))
         liste = list(cursor)
@@ -20,6 +28,9 @@ class utilisateur(object):
           print("identifiant deja utilisé")
 
     def connexion(self):
+        """
+        fonction permettant de se connecter
+        """
         lst = [self.id, self.mdp]
         cursor.execute("""SELECT identifiant FROM utilisateur where identifiant=(?) and mot_passe=(?)""", (lst[0],lst[1]))
         liste = list(cursor)
@@ -31,6 +42,10 @@ class utilisateur(object):
 
 
     def supprimer(self):
+        """
+        fonction permettant la suppression d'un utilisateur
+
+        """
         lst = [self.id, self.mdp]
         cursor.execute("""SELECT identifiant FROM utilisateur where identifiant=(?)""", (self.id,))
         liste = list(cursor)
@@ -41,5 +56,3 @@ class utilisateur(object):
             print("suppression effectué avec succes ")
         else:
             print("--")
-user=utilisateur("1111","1111")
-user.supprimer()
