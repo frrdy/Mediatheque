@@ -24,7 +24,7 @@ class journal(objets):
         if liste!=[]:
             print("identifiant deja utilisé donc objet deja existant")
 
-def supprimer(identifiant):
+def supprimerJ(identifiant):
             cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
             liste = list(cursor)
             print(liste)

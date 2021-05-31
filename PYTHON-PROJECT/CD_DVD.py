@@ -24,7 +24,7 @@ class CD_DVD(objets):
             print("identifiant deja utilisé donc objet deja existant")
 
 
-def supprimer(identifiant):
+def supprimerCD_DVD(identifiant):
          cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
          liste = list(cursor)
          print(liste)

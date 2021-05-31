@@ -26,7 +26,7 @@ class magazine(objets):
         if liste!=[]:
             print("identifiant deja utilisé donc objet deja existant")
 
-def supprimer(identifiant):
+def supprimerM(identifiant):
             cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
             liste = list(cursor)
             print(liste)

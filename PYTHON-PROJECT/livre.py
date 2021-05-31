@@ -24,7 +24,7 @@ class livre(objets):
         if liste!=[]:
             print("identifiant deja utilisé donc objet deja existant")
 
-def supprimer(identifiant):
+def supprimerL(identifiant):
             cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
             liste = list(cursor)
             print(liste)
