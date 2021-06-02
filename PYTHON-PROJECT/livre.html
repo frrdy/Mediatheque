@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module livre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>livre</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cdell%5Cmediatheque%5Cpython-project%5Clivre.py">c:\users\dell\mediatheque\python-project\livre.py</a></font></td></tr></table>
+    <p><tt>@author:&nbsp;WANDJI&nbsp;K&nbsp;Frédérique</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlite3.html">sqlite3</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="fonctions.html#objets">fonctions.objets</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="livre.html#livre">livre</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="livre">class <strong>livre</strong></a>(<a href="fonctions.html#objets">fonctions.objets</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#livre">livre</a>(idobjet,&nbsp;nom,&nbsp;auteur,&nbsp;datep,&nbsp;dateaj,&nbsp;typee,&nbsp;idutilisateur,&nbsp;nombrepage,&nbsp;maisonedition,&nbsp;typel)<br>
+&nbsp;<br>
+constructeur<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="livre.html#livre">livre</a></dd>
+<dd><a href="fonctions.html#objets">fonctions.objets</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="livre-__init__"><strong>__init__</strong></a>(self, idobjet, nom, auteur, datep, dateaj, typee, idutilisateur, nombrepage, maisonedition, typel)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="livre-ajout"><strong>ajout</strong></a>(self)</dt><dd><tt>Ajout&nbsp;d'un&nbsp;<a href="#livre">livre</a></tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="fonctions.html#objets">fonctions.objets</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-TLauteur"><strong>TLauteur</strong></a>(nomauteur)</dt><dd><tt>Fonction&nbsp;pour&nbsp;le&nbsp;tri&nbsp;des&nbsp;livres&nbsp;en&nbsp;fonction&nbsp;du&nbsp;nom&nbsp;de&nbsp;l'auteur<br>
+@param&nbsp;nomauteur:&nbsp;nom&nbsp;de&nbsp;l'auteur<br>
+@return:&nbsp;livres&nbsp;dont&nbsp;le&nbsp;nom&nbsp;de&nbsp;l'auteur&nbsp;est&nbsp;donné&nbsp;en&nbsp;argument&nbsp;de&nbsp;la&nbsp;fonction</tt></dd></dl>
+ <dl><dt><a name="-TLdateaj"><strong>TLdateaj</strong></a>(jour)</dt><dd><tt>Fonction&nbsp;pour&nbsp;le&nbsp;tri&nbsp;des&nbsp;livres&nbsp;en&nbsp;fonction&nbsp;de&nbsp;la&nbsp;date&nbsp;d'ajout<br>
+@param&nbsp;jour:&nbsp;date&nbsp;d'ajout<br>
+@return:&nbsp;livres&nbsp;dont&nbsp;la&nbsp;date&nbsp;d'ajout&nbsp;est&nbsp;donné&nbsp;en&nbsp;argument&nbsp;de&nbsp;la&nbsp;fonction</tt></dd></dl>
+ <dl><dt><a name="-TLdatep"><strong>TLdatep</strong></a>(jour)</dt><dd><tt>Fonction&nbsp;pour&nbsp;le&nbsp;tri&nbsp;des&nbsp;livres&nbsp;en&nbsp;fonction&nbsp;de&nbsp;la&nbsp;date&nbsp;de&nbsp;publication<br>
+@param&nbsp;jour:&nbsp;date&nbsp;de&nbsp;publication<br>
+@return:&nbsp;livres&nbsp;dont&nbsp;la&nbsp;date&nbsp;de&nbsp;publication&nbsp;est&nbsp;donné&nbsp;en&nbsp;argument&nbsp;de&nbsp;la&nbsp;fonction</tt></dd></dl>
+ <dl><dt><a name="-TLmaisone"><strong>TLmaisone</strong></a>(nom)</dt><dd><tt>Fonction&nbsp;pour&nbsp;le&nbsp;tri&nbsp;des&nbsp;livres&nbsp;en&nbsp;fonction&nbsp;du&nbsp;nom&nbsp;de&nbsp;la&nbsp;maison&nbsp;d'édition<br>
+@param&nbsp;nom:&nbsp;nom&nbsp;de&nbsp;la&nbsp;maison&nbsp;d'édition<br>
+@return:&nbsp;livres&nbsp;dont&nbsp;le&nbsp;nom&nbsp;de&nbsp;la&nbsp;maison&nbsp;d'édition&nbsp;est&nbsp;donné&nbsp;en&nbsp;argument&nbsp;de&nbsp;la&nbsp;fonction</tt></dd></dl>
+ <dl><dt><a name="-TLtypel"><strong>TLtypel</strong></a>(nom)</dt><dd><tt>Fonction&nbsp;pour&nbsp;le&nbsp;tri&nbsp;des&nbsp;livres&nbsp;en&nbsp;fonction&nbsp;du&nbsp;type<br>
+&nbsp;@param&nbsp;nom:&nbsp;type<br>
+&nbsp;@return:&nbsp;livres&nbsp;dont&nbsp;le&nbsp;type&nbsp;est&nbsp;donné&nbsp;en&nbsp;argument&nbsp;de&nbsp;la&nbsp;fonction</tt></dd></dl>
+ <dl><dt><a name="-supprimerL"><strong>supprimerL</strong></a>(identifiant)</dt><dd><tt>suppression&nbsp;d'un&nbsp;<a href="#livre">livre</a>&nbsp;à&nbsp;partir&nbsp;de&nbsp;son&nbsp;identifiant<br>
+@param&nbsp;identifiant:&nbsp;identifiant&nbsp;du&nbsp;<a href="#livre">livre</a>&nbsp;à&nbsp;supprimer</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>conn</strong> = &lt;sqlite3.Connection object&gt;<br>
+<strong>cursor</strong> = &lt;sqlite3.Cursor object&gt;</td></tr></table>
+</body></html>

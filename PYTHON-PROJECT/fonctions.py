@@ -31,10 +31,10 @@ def afficherCD_DVD():
     """
     fonction pour l'affichage de tous les CD/DVD
     @return: les CD/DVD
-    """"
-        cursor.execute("""SELECT * FROM objets, CD_DVD where objets.idobjet=CD_DVD.idobjet""")
-        liste = list(cursor)
-        return liste
+    """
+    cursor.execute("""SELECT * FROM objets, CD_DVD where objets.idobjet=CD_DVD.idobjet""")
+    liste = list(cursor)
+    return liste
 
 
 
@@ -120,18 +120,3 @@ def afficherIDM(identifiant):
     liste=list(cursor)
     return liste
 
-
-#obj1=CD_DVD(33322995654,"k","k","03-04-2020","03-04-2021","CD-DVD","1111","2:00:00","documentaire")
-#liv1=livre(33322,"A","A","03-04-2020","03-04-2021","livre",1111,22,"lalala","documentaire")
-#liv1.supprimer()
-#obj1.supprimer()
-#jou1=journal(33324322,"A","A","03-04-2020","03-04-2021","journal",1111,22,"lalala","politique")
-#jou1.supprimer()
-#mag1=magazine(3332456734222,"A","A","03-04-2020","03-04-2021","magazine",1111,22,"lalala","politique","hebdomadaire")
-#mag1.supprimer()
-#afficher()
-#afficherCD_DVD()
-
-# affichermagazine()
-# afficherjournal()
-# afficherlivre()

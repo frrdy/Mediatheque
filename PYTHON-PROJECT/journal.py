@@ -39,14 +39,14 @@ def supprimerJ(identifiant):
     suppression d'un journal en fonction de son identifiant
     @param identifiant: identifiant du journal à supprimer
     """
-            cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
-            liste = list(cursor)
-            print(liste)
-            if liste != []:
-                cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
-                cursor.execute(""" DELETE FROM journal WHERE idobjet= (?) """, (identifiant,))
-                conn.commit()
-                print("suppression effectuée avec succes")
+    cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
+    liste = list(cursor)
+    print(liste)
+    if liste != []:
+        cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
+        cursor.execute(""" DELETE FROM journal WHERE idobjet= (?) """, (identifiant,))
+        conn.commit()
+        print("suppression effectuée avec succes")
 
 
 def TJauteur(nomauteur):

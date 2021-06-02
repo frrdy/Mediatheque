@@ -38,14 +38,14 @@ def supprimerL(identifiant):
     suppression d'un livre à partir de son identifiant
     @param identifiant: identifiant du livre à supprimer
     """
-            cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
-            liste = list(cursor)
-            print(liste)
-            if liste != []:
-                cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
-                cursor.execute(""" DELETE FROM Livre WHERE idobjet= (?) """, (identifiant,))
-                conn.commit()
-                print("suppression effectuée avec succes")
+    cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
+    liste = list(cursor)
+    print(liste)
+    if liste != []:
+      cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
+      cursor.execute(""" DELETE FROM Livre WHERE idobjet= (?) """, (identifiant,))
+      conn.commit()
+      print("suppression effectuée avec succes")
 
 
 def TLauteur(nomauteur):

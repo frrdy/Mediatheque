@@ -40,14 +40,14 @@ def supprimerM(identifiant):
     suppression d'un magazine à partir se son identifiant
     @param identifiant: identifiant du magazine à supprimer
     """
-            cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
-            liste = list(cursor)
-            print(liste)
-            if liste != []:
-                cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
-                cursor.execute(""" DELETE FROM magazine WHERE idobjet= (?) """, (ientifiant,))
-                conn.commit()
-                print("suppression effectuée avec succes")
+    cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
+    liste = list(cursor)
+    print(liste)
+    if liste != []:
+       cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
+       cursor.execute(""" DELETE FROM magazine WHERE idobjet= (?) """, (ientifiant,))
+       conn.commit()
+       print("suppression effectuée avec succes")
 
 
 def TMauteur(nomauteur):

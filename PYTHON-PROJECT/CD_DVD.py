@@ -36,11 +36,11 @@ def supprimerCD_DVD(identifiant):
     @author: WANDJI K. Frédérique
     Fonction permettant la suppression d'un objet de type CD/DVD à partir de son identifiant
     @param identifiant: parametre représentant l'identifiant de l'objet à supprimer
-    """"
-         cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
-         liste = list(cursor)
-         print(liste)
-         if liste!=[]:
+    """
+    cursor.execute(""" select idobjet from objets where idobjet= (?) """, (identifiant,))
+    liste = list(cursor)
+    print(liste)
+    if liste!=[]:
             cursor.execute(""" DELETE FROM objets WHERE idobjet= (?) """, (identifiant,))
             cursor.execute(""" DELETE FROM CD_DVD WHERE idobjet= (?) """, (identifiant,))
             conn.commit()
